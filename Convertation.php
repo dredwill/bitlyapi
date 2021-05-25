@@ -11,7 +11,7 @@ class Convertation
 
     public function longToShort($request)
 	{
-        $bitlyClient = new BitlyClient('700b796d9b8c5049b604483c8adac4cbc2e30877');
+        $bitlyClient = new BitlyClient('');
         $options = ['longUrl' => $request,
             'format' => 'json'];
         $response = $bitlyClient->shorten($options);
@@ -21,7 +21,7 @@ class Convertation
 	
 	public function shortToLong($request)
 	{
-        $bitlyClient = new BitlyClient('700b796d9b8c5049b604483c8adac4cbc2e30877');
+        $bitlyClient = new BitlyClient('');
         $options = ['shortUrl' => $request,
             'format' => 'json'];
         $response = $bitlyClient->expand($options);
